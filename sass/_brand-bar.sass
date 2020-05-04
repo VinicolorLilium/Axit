@@ -1,0 +1,72 @@
+// ===============================================
+// общие стили для блока
+.brand-bar
+	padding: 20px 0
+	box-shadow: 0px 1px 3px 0 hsla(0, 0%, 0%, 0.38)
+	background-color: hsl(0, 0%, 100%)
+	// контент секции делиться на два блока
+	&__body
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@media (max-width: $md2)
+			flex-wrap: wrap
+	&__column
+		flex: 0 1 auto
+	// блок с описанием
+	&__content
+		width: calc(100% / 12 * 4)
+		@media (max-width: $md2)
+			width: 100%
+			margin: 0 0 30px 0
+	// заголовок в блоке с описанием
+	&__title
+		font-size: 20px
+		font-weight: bold
+		color: hsl(0, 0%, 20%)
+		text-transform: capitalize
+		margin: 0 0 12px 0
+	// описание
+	&__text
+		line-height: 1.43
+	&__social
+		width: calc(100% / 12 * 8)
+		@media (max-width: $md1)
+			width: 100%
+// ===========================================
+// блок с соц сетями как самостоятельный блок
+.social
+	&__list
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		@media (max-width: $md2)
+			justify-content: center
+			flex-wrap: wrap
+		& li
+			margin: 0 60px 0 0
+			@media (max-width: $md1)
+				margin: 0 30px 0 0
+			&:last-child
+				margin: 0
+		// картинки соц сетей вставлены в виде иконочного шрифта
+		& a::after
+			font-family: 'icomoon'
+			font-size: 48px
+			color: hsl(0, 0%, 80%)
+			@media (max-width: $md1)
+				font-size: 40px
+		& li:nth-child(1) a::after
+			content: "\f09a"
+		& li:nth-child(2) a::after
+			content: "\f099"
+		& li:nth-child(3) a::after
+			content: "\f0d5"
+		& li:nth-child(4) a::after
+			content: "\f0d2"
+		& li:nth-child(5) a::after
+			content: "\f16d"
+		& li:nth-child(6) a::after
+			content: "\f1a4"
+		& li:nth-child(7) a::after
+			content: "\f09e"

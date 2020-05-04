@@ -1,0 +1,107 @@
+//===============================================================
+//подключение шрифтов
+//===============================================================
+@import "_fonts.sass"
+$font-one:  'Open Sans', sans-serif
+$font-two: 'Raleway', sans-serif
+//===============================================================
+//базовые переменные
+//===============================================================
+$basik-font-size: 14px
+$basik-color: hsl(228, 2%, 54%)
+$basik-font-family: $font-one
+
+//===============================================================
+// брейкпоинты
+//===============================================================
+$mw: 1130px
+$md1: 1024px
+$md2: 768px
+$md3: 425px
+$md4: 375px
+$md5: 320px
+//===============================================================
+// базовые стили
+//===============================================================
+body
+	font-size: $basik-font-size
+	box-sizing: border-box
+	color: $basik-color
+	line-height: 1.2
+	font-family: $basik-font-family
+	height: 100vh /*занимает всю высоту видимой обласи*/
+	display: flex /*задание флекса позволяет прижать подвал к низу экрана*/
+	flex-direction: column
+body.block
+	overflow: hidden /*запрещаем скролл при открытом меню*/
+
+main
+	flex: 1 0 100%
+
+footer.footer
+	flex: 1 1 100%
+
+*,
+*::after,
+*::before
+	box-sizing: inherit
+	padding: 0
+	margin: 0
+
+ul
+	list-style: none
+
+a
+	display: inline-block
+	text-decoration: none
+
+.wrap
+	max-width: $mw
+	margin: 0 auto
+	padding: 0 15px
+// класс, делающий обычную картинку фоновой
+.ibg
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+.ibg img
+	width: 0
+	height: 0
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 0
+	visibility: hidden
+
+.logo
+
+.title-line
+	width: 64px
+	height: 2px
+	&--white
+		background: hsl(0, 0%, 100%)
+	&--02
+		background: hsl(25, 100%, 61%)
+
+//===============================================================
+// импорт стилей
+@import "_header.sass"
+@import "_first-screen.sass"
+@import "_brand-bar.sass"
+@import "_feature-01.sass"
+@import "_feature-02.sass"
+@import "_feature-03.sass"
+@import "_process.sass"
+@import "_pricing.sass"
+@import "_testimonials.sass"
+@import "_custom-section.sass"
+@import "_custom.sass"
+@import "_contact.sass"
+@import "_footer.sass"
+//===============================================================
+
+//===============================================================
+// проверка поддержки CSS Grid сетки
+//===============================================================
+@supports (display:grid)

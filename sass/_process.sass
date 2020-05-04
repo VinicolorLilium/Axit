@@ -1,0 +1,76 @@
+// ======================================
+// общие стили для секции
+.process
+	padding: 100px 0 70px
+	text-align: center
+	@media (max-width: $md2)
+		padding: 50px 0
+	&__title
+		font-family: $font-two
+		font-size: 36px
+		font-weight: 700
+		color: hsl(0, 0%, 13%)
+		margin: 0 0 25px 0
+		text-transform: uppercase
+	& .title-line
+		margin: 0 auto
+	&__description
+		line-height: 1.43
+		margin: 25px 0 0 0
+// ==================================
+// стили для контейнера с преимуществами
+.process-conteiner
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	margin: 80px -15px 0
+	@media (max-width: 550px)
+		margin: 80px 0 0 0
+	@media (max-width: $md3)
+		margin: 30px 0 0 0
+	&__column
+		width: calc(100% / 12 * 4 - 30px)
+		margin: 0 15px 30px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		@media (max-width: $md2)
+			width: calc(100% / 12 * 6 - 30px)
+		@media (max-width: 550px)
+			width: 100%
+			margin: 0 0 30px 0
+	&__icon
+		&::before
+			font-family: 'icomoon'
+			font-size: 32px
+			color: hsl(25, 100%, 61%)
+			width: 70px
+			height: 70px
+			border: 2px solid hsl(25, 100%, 61%)
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0 auto
+			@media (max-width: $md3)
+				font-size: 24px
+				width: 50px
+				height: 50px
+		&--01::before
+			content: '\f0eb'
+		&--02::before
+			content: '\f11c'
+		&--03::before
+			content: '\f0e7'
+	&__title
+		font-size: 20px
+		font-weight: 700
+		color: hsl(0, 0%, 20%)
+		text-transform: capitalize
+		margin: 25px 0
+		flex: 1 0 auto
+		@media (max-width: $md3)
+			margin: 15px 0
+	&__text
+		@media (max-width: $md3)
+			font-size: 16px

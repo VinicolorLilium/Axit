@@ -1,0 +1,41 @@
+// общие стили
+.footer
+	background: hsl(0, 0%, 0%)
+	padding: 20px 0 15px
+	text-align: center
+	// блок с сылками на соц сети
+	&__list
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		& li
+			margin: 0 10px 0
+			@media (max-width: $md3)
+				margin: 0 20px 0
+		& a::after
+			font-family: 'icomoon'
+			font-size: 24px
+			font-weight: 400
+			color: hsl(0, 0%, 80%)
+			@media (max-width: $md3)
+				font-size: 36px
+		& li:nth-child(1) a::after
+			content: "\f09a"
+		& li:nth-child(2) a::after
+			content: "\f099"
+		& li:nth-child(3) a::after
+			content: "\f0d5"
+		& li:nth-child(4) a::after
+			content: "\f0d2"
+		& li:nth-child(5) a::after
+			content: "\f16d"
+		& li:nth-child(6) a::after
+			content: "\f1a4"
+		& li:nth-child(7) a::after
+			content: "\f09e"
+	// блок с копирайтом
+	&__copyright
+		font-size: 12px
+		font-weight: 400
+		color: hsla(0, 0%, 100%, 0.5)
+		margin: 15px 0 0 0

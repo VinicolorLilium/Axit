@@ -1,0 +1,82 @@
+// ======================================================
+// общие стили для секции
+.feature-02
+	padding: 110px 0 90px
+	@media (max-width: $md2)
+		padding: 50px 0
+	// содержимое секции
+	&__body
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media (max-width: $md2)
+			flex-wrap: wrap
+	// стили для колонок секции
+	&__column
+		width: calc(100% / 12 * 6)
+		@media (max-width: $md2)
+			width: 100%
+	// блок с изображением
+	&__img
+		maw-width: 500px
+		min-height: 375px
+		margin: 0 160px 0 0
+		transition: all 0.3s
+		@media (max-width: $md1)
+			margin: 0 40px 0 0
+		@media (max-width: $md2)
+			margin: 0 0 30px 0
+			max-width: 100%
+			min-height: 300px
+		&:hover
+			box-shadow: 0 0 20px rgba(0,0,0,0.6)
+	// заголовок секции
+	&__title
+		font-size: 20px
+		font-weight: bold
+		color: hsl(0, 0%, 13%)
+		margin: 0 0 25px 0
+	// текст  секции
+	&__text
+		line-height: 1.43
+		margin: 30px 0 0 0
+		@media (max-width: $md3)
+			font-size: 16px
+	// список
+	&__list
+		margin: 45px 0 0
+// ==================================================
+// оформление списка отдельным независимым блоком
+.feature-02-list
+	// деление пунктов списка на две колонки
+	&__column
+		display: flex
+		justify-content: space-between
+		margin: 0 0 40px 0
+	// иконка пункта списка
+	&__img
+		margin: 0 30px 0 0
+		@media (max-width: $md3)
+			margin: 0 15px 0 0
+		&::before
+			content:'\f0ed'
+			font-family: 'icomoon'
+			font-size: 16px
+			font-weight: 400
+			color: hsl(25, 100%, 61%)
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 40px
+			height: 40px
+			border: 2px solid hsl(25, 100%, 61%)
+			border-radius: 50%
+	// заголовок пункта
+	&__title
+		font-weight: 600
+		color: hsl(0, 0%, 13%)
+		margin: 0 0 10px 0
+	// текст пункта
+	&__text
+		@media (max-width: $md3)
+			font-size: 16px
